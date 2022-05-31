@@ -6,6 +6,10 @@ git checkout -b notes
 
 git push origin clean-code-s1e1
 git push origin clean-code-s1e1 --force
+git push origin notes
+
+git commit -m "docs: update notes"
+
 git rebase -i HEAD~3
 
 git add index.html
