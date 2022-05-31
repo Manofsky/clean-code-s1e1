@@ -1,0 +1,68 @@
+Buy tickets
+
+git checkout master
+git checkout -b clean-code-s1e1
+git checkout -b notes
+
+git push origin clean-code-s1e1
+git push origin clean-code-s1e1 --force
+git rebase -i HEAD~3
+
+git add index.html
+git add style.css
+
+
+
+git commit -am "refactor: adjust CSS-formatting according to rule 3.5 in html-and-css.md"
+
+git commit -am "refactor: adjust CSS-formatting according to rule 3.6 in html-and-css.md"
+
+git commit -am "refactor: adjust CSS-formatting according to rule 3.7 in html-and-css.md"
+
+git commit -am "refactor: adjust CSS-formatting according to rule 3.8 in html-and-css.md"
+
+git commit -am "refactor: adjust HTML-formatting according to rule 2.5 in html-and-css.md"
+
+git commit -am "fix: remove the type attribute for connecting styles and script according to rule 2.4 in html-and-css.md"
+
+git commit -am "refactor: adjust HTML-formatting according to rule 2.3 in html-and-css.md"
+
+git commit -am "fix: add Html5 DOCTYPE tag according to rule 2.2 in html-and-css.md"
+
+git commit -am "refactor: adjust HTML-and-CSS-formatting according to rule 1.3 in html-and-css.md"
+
+git commit -am "refactor: adjust HTML-and-CSS-formatting according to rule 1.2 in html-and-css.md"
+
+git commit -am "refactor: adjust CSS-formatting according to rule 1.1 in html-and-css.md"
+
+"refactor: indent each nested element according to rules 2.1 & 1.1 in html-and-css.md"
+
+git commit --amend
+
+git commit -am "refactor: indent each nested element according to rules 2.1 in html-and-css.md"
+
+"refactor: select new lines according to rules 2.1 in html-and-css.md"
+
+git commit --amend
+
+git commit -am "refactor: adjust HTML-formatting according to rules 2.1 in html-and-css.md"
+
+
+В поиске VSCode:
+editor.renderWhitespace (настройка отображения пробелов)
+сделал all вместо selection
+
+"editor.renderWhitespace": "all",
+"editor.tabSize": 2
+
+Замена табуляции отступами
+Detect Indentation
+Editor: Insert Spaces
+
+расширение prettier для VSCode
+
+Editor: Format On Save
+
+
+git diff
+git show b17c35e
