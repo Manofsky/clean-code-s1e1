@@ -14,16 +14,30 @@ git rebase -i HEAD~3
 
 git add index.html
 git add style.css
+git add app.js
 
 
+git commit -am "refactor: adjust CSS-HTML-JS-formatting according to rule 3.4 in html-and-css.md"
 
-git commit -am "refactor: adjust CSS-formatting according to rule 3.5 in html-and-css.md"
+git commit -am "fix: undo formatting fix according to rule 1.2 in html-and-css.md"
 
-git commit -am "refactor: adjust CSS-formatting according to rule 3.6 in html-and-css.md"
+git commit -am "fix: fix CSS-HTML-formatting according to rules 1.2 & 3.5 in html-and-css.md"
+
+git commit -am "refactor: adjust CSS-HTML-JS-formatting according to rule 3.3 in html-and-css.md"
+
+git commit -am "refactor: adjust CSS-HTML-JS-formatting according to rule 3.2 in html-and-css.md"
+
+git commit -am "refactor: adjust CSS-HTML-JS-formatting according to rule 3.1 in html-and-css.md"
+
+git commit -am "refactor: adjust CSS-formatting according to rule 3.8 in html-and-css.md"
 
 git commit -am "refactor: adjust CSS-formatting according to rule 3.7 in html-and-css.md"
 
-git commit -am "refactor: adjust CSS-formatting according to rule 3.8 in html-and-css.md"
+git commit -am "refactor: adjust CSS-formatting according to rule 3.6 in html-and-css.md"
+
+git commit -am "refactor: adjust CSS-formatting according to rule 3.5 in html-and-css.md"
+
+git commit -am "fix: add alt attributes according to rule 1.2 in html-and-css-extended.md"
 
 git commit -am "refactor: adjust HTML-formatting according to rule 2.5 in html-and-css.md"
 
@@ -70,3 +84,11 @@ Editor: Format On Save
 
 git diff
 git show b17c35e
+
+alexom98 - 21 балл
+
+{
+  "editor.formatOnSave": false,
+  "editor.renderWhitespace": "all",
+  "editor.tabSize": 2
+}
