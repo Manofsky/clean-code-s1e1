@@ -19,7 +19,9 @@ body {
 
 @media (max-width: 768px) {
 
-.basic-info { text-align: center; }
+  .basic-info {
+    text-align: center;
+  }
 
 }
 .matrix {
