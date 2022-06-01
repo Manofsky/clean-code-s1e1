@@ -1,6 +1,8 @@
 Buy tickets
 
 git checkout master
+git checkout clean-code-s1e1
+git checkout notes
 git checkout -b clean-code-s1e1
 git checkout -b notes
 
