@@ -92,7 +92,7 @@
   display: block;
   margin: 0 0 20px;
 }
-#new-task {
+.new {
   width: 318px;
 }
 
@@ -129,7 +129,7 @@
 }
 
 /* Completed */
-.bulleted-list#compl-tasks .label {
+.bulleted-list.compl .label {
   text-decoration: line-through;
   color: #888;
 }
