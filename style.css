@@ -37,16 +37,16 @@
 .input-field {
   display: flex;
 }
-ul {
+.bulleted-list {
   margin: 0;
   padding: 0px;
 }
-li,
-h3 {
+.list-item,
+.title {
   list-style: none;
 }
-input,
-button {
+.input,
+.btn {
   outline: none;
 }
 .btn {
