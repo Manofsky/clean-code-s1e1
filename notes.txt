@@ -14,10 +14,25 @@ git commit -m "docs: update notes"
 
 git rebase -i HEAD~3
 
+git add index.html style.css app.js
 git add index.html
 git add style.css
 git add app.js
 
+
+
+
+git commit -am "refactor: remove the outdated charset attribute of the link tag"
+
+git commit -am "refactor: additionally adjust HTML-formatting according to rule 2.5 in html-and-css.md"
+
+git commit -am "refactor: refuse to use id"
+
+git commit -am "fix: apply semantic tags according to rule 1.1 in html-and-css-extended.md"
+
+git commit -am "fix: add missing margins for nested HTML elements according to rule 2.1 in html-and-css.md"
+
+git commit -am "fix: fix CSS-HTML-JS-formatting according to rule 3.4 in html-and-css.md"
 
 git commit -am "refactor: adjust CSS-HTML-JS-formatting according to rule 3.4 in html-and-css.md"
 
@@ -94,3 +109,6 @@ alexom98 - 21 балл
   "editor.renderWhitespace": "all",
   "editor.tabSize": 2
 }
+
+kirsawka
+Ошибка валидатора говорит, что атрибут charset устаревший.
