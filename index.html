@@ -7,45 +7,49 @@
     <link rel="stylesheet" href="style.css" media="screen">
   </head>
   <body class="body">
-    <header class="basic-info">
-      <img class="matrix-img" src="./eisenhower-matrix.jpg" alt="eisenhower-matrix">
-      <a class="more-info" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
+    <header class="header">
+      <img class="header__matrix-img" src="./eisenhower-matrix.jpg" alt="eisenhower-matrix">
+      <a class="header__more-info" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
     </header>
-    <main class="matrix">
-      <section>
-        <h3 class="new-task title">Add Item</h3>
-        <div class="input-field">
-            <input class="task input-text input new" type="text">
-            <button class="btn">Add</button>
+    <main class="main">
+      <section class="add-item-section">
+        <h3 class="main__subtitle main__subtitle_new-task">Add Item</h3>
+        <div class="add-item-section__wrapper">
+            <input class="add-item-section__input" type="text">
+            <button class="main__btn">Add</button>
         </div>
       </section>
-      <h3 class="title">Todo</h3>
-      <ul class="bulleted-list incompl">
-        <li class="list-item">
-            <input class="checkbox input" type="checkbox">
-            <span class="task label">Pay Bills</span>
-            <input type="text" class="task input-text input">
-            <button class="edit btn">Edit</button>
-            <button class="delete btn"><img class="remove-img" src="./remove.svg" alt="remove-button"></button>
-        </li>
-        <li class="edit-mode list-item">
-            <input class="checkbox input" type="checkbox">
-            <span class="task label">Go Shopping</span>
-            <input type="text" value="Go Shopping" class="task input-text input">
-            <button class="edit btn">Save</button>
-            <button class="delete btn"><img class="remove-img" src="./remove.svg" alt="remove-button"></button>
-        </li>
-      </ul>
-      <h3 class="title">Completed</h3>
-      <ul class="bulleted-list compl">
-        <li class="list-item">
-            <input class="checkbox input" type="checkbox" checked>
-            <span class="task label">See the Doctor</span>
-            <input type="text" class="task input-text input">
-            <button class="edit btn">Edit</button>
-            <button class="delete btn"><img class="remove-img" src="./remove.svg" alt="remove-button"></button>
-        </li>
-      </ul>
+      <section class="to-do-section">
+        <h3 class="main__subtitle">Todo</h3>
+        <ul class="to-do-section__bulleted-list bulleted-list">
+          <li class="bulleted-list__item">
+              <input class="main__input main__input_checkbox" type="checkbox">
+              <span class="bulleted-list__task-label">Pay Bills</span>
+              <input type="text" class="bulleted-list__input">
+              <button class="main__btn main__btn_edit">Edit</button>
+              <button class="main__btn btn-delete"><img class="btn-delete__img" src="./remove.svg" alt="remove-button"></button>
+          </li>
+          <li class="bulleted-list__item bulleted-list__item_edit-mode">
+              <input class="main__input main__input_checkbox" type="checkbox">
+              <span class="bulleted-list__task-label">Go Shopping</span>
+              <input type="text" value="Go Shopping" class="bulleted-list__input">
+              <button class="main__btn main__btn_edit">Save</button>
+              <button class="main__btn btn-delete"><img class="btn-delete__img" src="./remove.svg" alt="remove-button"></button>
+          </li>
+        </ul>
+      </section>
+      <section class="completed-section">
+        <h3 class="main__subtitle">Completed</h3>
+        <ul class="completed-section__bulleted-list bulleted-list">
+          <li class="bulleted-list__item">
+              <input class="main__input main__input_checkbox" type="checkbox" checked>
+              <span class="bulleted-list__task-label bulleted-list__task-label_completed">See the Doctor</span>
+              <input type="text" class="bulleted-list__input">
+              <button class="main__btn main__btn_edit">Edit</button>
+              <button class="main__btn btn-delete"><img class="btn-delete__img" src="./remove.svg" alt="remove-button"></button>
+          </li>
+        </ul>
+      </section>
     </main>
     <script src="app.js"></script>
   </body>
