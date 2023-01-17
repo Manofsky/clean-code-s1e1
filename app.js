@@ -8,10 +8,10 @@
 
 // Event handling, user interaction is what starts the code execution.
 
-var taskInput=document.getElementById("new-task");//Add a new task.
+var taskInput = document.querySelector('.add-item-section__input');
 var addButton=document.getElementsByTagName("button")[0];//first button
-var incompleteTaskHolder=document.getElementById("incompleteTasks");//ul of #incompleteTasks
-var completedTasksHolder=document.getElementById("completed-tasks");//completed-tasks
+var incompleteTaskHolder = document.querySelector(".to-do-section__bulleted-list");
+var completedTasksHolder = document.querySelector(".completed-section__bulleted-list");
 
 
 //New task list item
@@ -22,7 +22,7 @@ var createNewTaskElement=function(taskString){
     //input (checkbox)
     var checkBox=document.createElement("input");//checkbx
     //label
-    var label=document.createElement("label");//label
+    var span=document.createElement("span");//label
     //input (text)
     var editInput=document.createElement("input");//text
     //button.edit
@@ -32,28 +32,31 @@ var createNewTaskElement=function(taskString){
     var deleteButton=document.createElement("button");//delete button
     var deleteButtonImg=document.createElement("img");//delete button image
 
-    label.innerText=taskString;
-    label.className='task';
+    span.innerText=taskString;
+    span.className='bulleted-list__task-label';
 
     //Each elements, needs appending
     checkBox.type="checkbox";
+    checkBox.className="main__input_checkbox";
     editInput.type="text";
-    editInput.className="task";
+    editInput.className="bulleted-list__input";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className="edit";
+    editButton.className="main__btn main__btn_edit";
 
-    deleteButton.className="delete";
+    deleteButton.className="main__btn btn-delete";
     deleteButtonImg.src='./remove.svg';
+    deleteButtonImg.className="btn-delete__img";
     deleteButton.appendChild(deleteButtonImg);
 
 
     //and appending.
     listItem.appendChild(checkBox);
-    listItem.appendChild(label);
+    listItem.appendChild(span);
     listItem.appendChild(editInput);
     listItem.appendChild(editButton);
     listItem.appendChild(deleteButton);
+    listItem.className='bulleted-list__item';
     return listItem;
 }
 
@@ -83,23 +86,24 @@ var editTask=function(){
     var listItem=this.parentNode;
 
     var editInput=listItem.querySelector('input[type=text]');
-    var label=listItem.querySelector("label");
-    var editBtn=listItem.querySelector(".edit");
-    var containsClass=listItem.classList.contains("editMode");
+    var span=listItem.querySelector("span");
+    var editBtn=listItem.querySelector(".main__btn_edit");
+    var containsClass=listItem.classList.contains("bulleted-list__item_edit-mode");
     //If class of the parent is .editmode
     if(containsClass){
 
         //switch to .editmode
         //label becomes the inputs value.
-        label.innerText=editInput.value;
+        span.innerText=editInput.value;
         editBtn.innerText="Edit";
     }else{
-        editInput.value=label.innerText;
+      // console.log(span.innerText);
+        editInput.value=span.innerText;
         editBtn.innerText="Save";
     }
 
     //toggle .editmode on the parent.
-    listItem.classList.toggle("editMode");
+    listItem.classList.toggle("bulleted-list__item_edit-mode");
 };
 
 
@@ -156,8 +160,8 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
     var checkBox=taskListItem.querySelector("input[type=checkbox]");
-    var editButton=taskListItem.querySelector("button.edit");
-    var deleteButton=taskListItem.querySelector("button.delete");
+    var editButton=taskListItem.querySelector(".main__btn_edit");
+    var deleteButton=taskListItem.querySelector(".btn-delete");
 
 
     //Bind editTask to edit button.
